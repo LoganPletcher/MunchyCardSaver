@@ -18,11 +18,15 @@ namespace MunchyCardSaver
         public void Save(T info)
         {
             SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "XML Files | *.xml";
             sfd.ShowDialog();
-            FileStream SaveFile = sfd.OpenFile() as FileStream;
-            XmlSerializer bf = new XmlSerializer(typeof(T));
-            bf.Serialize(SaveFile, info);
-            SaveFile.Close();
+            if (sfd.FileName != "")
+            {
+                FileStream SaveFile = sfd.OpenFile() as FileStream;
+                XmlSerializer bf = new XmlSerializer(typeof(T));
+                bf.Serialize(SaveFile, info);
+                SaveFile.Close();
+            }
         }
 
         public T Load()
