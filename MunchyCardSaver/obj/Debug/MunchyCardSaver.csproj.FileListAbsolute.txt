@@ -1,0 +1,9 @@
+c:\users\logan.pletcher\documents\visual studio 2015\Projects\MunchyCardSaver\MunchyCardSaver\bin\Debug\MunchyCardSaver.exe.config
+c:\users\logan.pletcher\documents\visual studio 2015\Projects\MunchyCardSaver\MunchyCardSaver\bin\Debug\MunchyCardSaver.exe
+c:\users\logan.pletcher\documents\visual studio 2015\Projects\MunchyCardSaver\MunchyCardSaver\bin\Debug\MunchyCardSaver.pdb
+c:\users\logan.pletcher\documents\visual studio 2015\Projects\MunchyCardSaver\MunchyCardSaver\obj\Debug\MunchyCardSaver.csprojResolveAssemblyReference.cache
+c:\users\logan.pletcher\documents\visual studio 2015\Projects\MunchyCardSaver\MunchyCardSaver\obj\Debug\MunchyCardSaver.Munch_Card_Saving_CC.resources
+c:\users\logan.pletcher\documents\visual studio 2015\Projects\MunchyCardSaver\MunchyCardSaver\obj\Debug\MunchyCardSaver.Properties.Resources.resources
+c:\users\logan.pletcher\documents\visual studio 2015\Projects\MunchyCardSaver\MunchyCardSaver\obj\Debug\MunchyCardSaver.csproj.GenerateResource.Cache
+c:\users\logan.pletcher\documents\visual studio 2015\Projects\MunchyCardSaver\MunchyCardSaver\obj\Debug\MunchyCardSaver.exe
+c:\users\logan.pletcher\documents\visual studio 2015\Projects\MunchyCardSaver\MunchyCardSaver\obj\Debug\MunchyCardSaver.pdb
