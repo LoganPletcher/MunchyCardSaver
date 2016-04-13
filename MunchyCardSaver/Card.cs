@@ -55,7 +55,7 @@ public class MysteryCard : ICard
         {
             string s = state.ToString();
             string n = name.ToString();
-            string d = name.ToString();
+            string d = description.ToString();
 
             return "State: " + s + "Name: " + n + "Description: " + d;
         }
@@ -73,10 +73,10 @@ public class MysteryCard : ICard
 
     internal class Monster
     {
-        private int power;
+        public int power;
     }
 
-    private int m_power;
+    protected int m_power;
 
 
     public string Name
@@ -103,7 +103,7 @@ public class MysteryCard : ICard
         set { m_power = value; }
     }
 
-    private MysteryType _mysteryType;
+    protected MysteryType _mysteryType;
 
     public MysteryType mType
     {
@@ -112,13 +112,15 @@ public class MysteryCard : ICard
     }
 }
 
-
+[Serializable()]
 public class TreasureCard : ICard, ITreasure
 {
-    
     protected string m_name;
     //Name of the card
     protected string m_description;
+    //Effect the card has when played on field
+    
+    protected int m_power;
     //Effect the card has when played on field
 
     protected bool m_state;
@@ -129,10 +131,16 @@ public class TreasureCard : ICard, ITreasure
         set { m_cardType = value; }
     }
 
-    public System.Type MonoType
+    //public System.Type MonoType
+    //{
+    //    get { return typeof(TreasureCardMono); }
+    //    set { }
+    //}
+
+    public int Power
     {
-        get { return typeof(TreasureCardMono); }
-        set { }
+        get { return m_power; }
+        set { m_power = value; }
     }
     public string Info
     {
@@ -152,6 +160,14 @@ public class TreasureCard : ICard, ITreasure
 
     }
 
+    public TreasureCard(string n, string d, int g, int p)
+    {
+        m_state = false;
+        m_description = d;
+        m_name = n;
+        m_GoldValue = g;
+        m_power = p;
+    }
     public TreasureCard(string n, string d, int g)
     {
         m_state = false;
@@ -196,5 +212,10 @@ public class TreasureCard : ICard, ITreasure
         get { return m_description; }
         set { m_description = value; }
     }
+
+}
+
+public class TreasureCardMono
+{
 
 }

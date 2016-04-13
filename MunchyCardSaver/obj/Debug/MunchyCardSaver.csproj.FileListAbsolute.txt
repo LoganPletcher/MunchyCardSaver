@@ -7,3 +7,5 @@ c:\users\logan.pletcher\documents\visual studio 2015\Projects\MunchyCardSaver\Mu
 c:\users\logan.pletcher\documents\visual studio 2015\Projects\MunchyCardSaver\MunchyCardSaver\obj\Debug\MunchyCardSaver.csproj.GenerateResource.Cache
 c:\users\logan.pletcher\documents\visual studio 2015\Projects\MunchyCardSaver\MunchyCardSaver\obj\Debug\MunchyCardSaver.exe
 c:\users\logan.pletcher\documents\visual studio 2015\Projects\MunchyCardSaver\MunchyCardSaver\obj\Debug\MunchyCardSaver.pdb
+C:\Users\logan.pletcher\Documents\Visual Studio 2015\Projects\MunchyCardSaver\MunchyCardSaver\obj\Debug\MunchyCardSaver.Mystery_Info.resources
+C:\Users\logan.pletcher\Documents\Visual Studio 2015\Projects\MunchyCardSaver\MunchyCardSaver\obj\Debug\MunchyCardSaver.Treasure_Info.resources

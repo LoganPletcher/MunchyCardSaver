@@ -31,11 +31,12 @@
             this.TreasureButton = new System.Windows.Forms.Button();
             this.MysteryButton = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.QuitButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // TreasureButton
             // 
-            this.TreasureButton.Location = new System.Drawing.Point(363, 320);
+            this.TreasureButton.Location = new System.Drawing.Point(363, 280);
             this.TreasureButton.Name = "TreasureButton";
             this.TreasureButton.Size = new System.Drawing.Size(75, 41);
             this.TreasureButton.TabIndex = 0;
@@ -67,11 +68,22 @@
             this.textBox1.Text = "What kind of card do you want to save?";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // QuitButton
+            // 
+            this.QuitButton.Location = new System.Drawing.Point(363, 340);
+            this.QuitButton.Name = "QuitButton";
+            this.QuitButton.Size = new System.Drawing.Size(75, 41);
+            this.QuitButton.TabIndex = 3;
+            this.QuitButton.Text = "Quit";
+            this.QuitButton.UseVisualStyleBackColor = true;
+            this.QuitButton.Click += new System.EventHandler(this.QuitButton_Click);
+            // 
             // Munch_Card_Saving_CC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(785, 563);
+            this.Controls.Add(this.QuitButton);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.MysteryButton);
             this.Controls.Add(this.TreasureButton);
@@ -89,6 +101,7 @@
         private System.Windows.Forms.Button TreasureButton;
         private System.Windows.Forms.Button MysteryButton;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button QuitButton;
     }
 }
 

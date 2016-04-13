@@ -43,6 +43,7 @@
             this.DescriptionTB = new System.Windows.Forms.TextBox();
             this.SaveButton = new System.Windows.Forms.Button();
             this.BackButton = new System.Windows.Forms.Button();
+            this.ErrorTB = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // ClassType
@@ -83,11 +84,11 @@
             this.textBox1.BackColor = System.Drawing.SystemColors.Control;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(12, 20);
+            this.textBox1.Location = new System.Drawing.Point(2, 20);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(100, 21);
+            this.textBox1.Size = new System.Drawing.Size(122, 21);
             this.textBox1.TabIndex = 4;
             this.textBox1.Text = "Mystery Card Type";
             // 
@@ -210,11 +211,24 @@
             this.BackButton.UseVisualStyleBackColor = true;
             this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
+            // ErrorTB
+            // 
+            this.ErrorTB.BackColor = System.Drawing.SystemColors.Control;
+            this.ErrorTB.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ErrorTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ErrorTB.Location = new System.Drawing.Point(294, 40);
+            this.ErrorTB.Multiline = true;
+            this.ErrorTB.Name = "ErrorTB";
+            this.ErrorTB.ReadOnly = true;
+            this.ErrorTB.Size = new System.Drawing.Size(172, 44);
+            this.ErrorTB.TabIndex = 16;
+            // 
             // Mystery_Info
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(785, 563);
+            this.Controls.Add(this.ErrorTB);
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.DescriptionTB);
@@ -254,5 +268,6 @@
         private System.Windows.Forms.TextBox DescriptionTB;
         private System.Windows.Forms.Button SaveButton;
         private System.Windows.Forms.Button BackButton;
+        private System.Windows.Forms.TextBox ErrorTB;
     }
 }

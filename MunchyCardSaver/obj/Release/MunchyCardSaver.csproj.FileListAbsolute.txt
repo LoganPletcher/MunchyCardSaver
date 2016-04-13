@@ -1,0 +1,11 @@
+C:\Users\logan.pletcher\Documents\Visual Studio 2015\Projects\MunchyCardSaver\MunchyCardSaver\bin\Release\MunchyCardSaver.exe.config
+C:\Users\logan.pletcher\Documents\Visual Studio 2015\Projects\MunchyCardSaver\MunchyCardSaver\bin\Release\MunchyCardSaver.exe
+C:\Users\logan.pletcher\Documents\Visual Studio 2015\Projects\MunchyCardSaver\MunchyCardSaver\bin\Release\MunchyCardSaver.pdb
+C:\Users\logan.pletcher\Documents\Visual Studio 2015\Projects\MunchyCardSaver\MunchyCardSaver\obj\Release\MunchyCardSaver.Munch_Card_Saving_CC.resources
+C:\Users\logan.pletcher\Documents\Visual Studio 2015\Projects\MunchyCardSaver\MunchyCardSaver\obj\Release\MunchyCardSaver.Mystery_Info.resources
+C:\Users\logan.pletcher\Documents\Visual Studio 2015\Projects\MunchyCardSaver\MunchyCardSaver\obj\Release\MunchyCardSaver.Properties.Resources.resources
+C:\Users\logan.pletcher\Documents\Visual Studio 2015\Projects\MunchyCardSaver\MunchyCardSaver\obj\Release\MunchyCardSaver.Treasure_Info.resources
+C:\Users\logan.pletcher\Documents\Visual Studio 2015\Projects\MunchyCardSaver\MunchyCardSaver\obj\Release\MunchyCardSaver.csproj.GenerateResource.Cache
+C:\Users\logan.pletcher\Documents\Visual Studio 2015\Projects\MunchyCardSaver\MunchyCardSaver\obj\Release\MunchyCardSaver.exe
+C:\Users\logan.pletcher\Documents\Visual Studio 2015\Projects\MunchyCardSaver\MunchyCardSaver\obj\Release\MunchyCardSaver.pdb
+C:\Users\logan.pletcher\Documents\Visual Studio 2015\Projects\MunchyCardSaver\MunchyCardSaver\obj\Release\MunchyCardSaver.csprojResolveAssemblyReference.cache

@@ -31,5 +31,11 @@ namespace MunchyCardSaver
             CT[0] = CardType.TREASURE;
             this.Close();
         }
+
+        private void QuitButton_Click(object sender, EventArgs e)
+        {
+            CT[0] = CardType.none;
+            this.Close();
+        }
     }
 }
