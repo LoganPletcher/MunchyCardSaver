@@ -18,7 +18,7 @@ namespace MunchyCardSaver
         {
             TC = tc;
             TC[0].CardType = TreasureType.DEFAULT;
-            TC[0].Description = "";
+            TC[0].Description = "This card has no description.";
             TC[0].Gold = 0;
             TC[0].Name = "";
             TC[0].Power = 0;
@@ -63,7 +63,12 @@ namespace MunchyCardSaver
 
         private void DescriptionTB_TextChanged(object sender, EventArgs e)
         {
-            TC[0].Description = DescriptionTB.Text;
+            if (DescriptionTB.Text == "")
+            {
+                TC[0].Description = "This card has no description.";
+            }
+            else
+                TC[0].Description = DescriptionTB.Text;
         }
 
         private void SaveButton_Click(object sender, EventArgs e)

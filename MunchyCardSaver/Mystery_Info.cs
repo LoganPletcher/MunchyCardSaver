@@ -17,7 +17,7 @@ namespace MunchyCardSaver
         {
             MC = mc;
             MC[0].CardType = MysteryType.CURSE;
-            MC[0].Description = "";
+            MC[0].Description = "This card has no description.";
             MC[0].Name = "";
             MC[0].Power = 0;
             MC[0].Reward = 0;
@@ -74,7 +74,12 @@ namespace MunchyCardSaver
 
         private void DescriptionTB_TextChanged(object sender, EventArgs e)
         {
-            MC[0].Description = DescriptionTB.Text;
+            if(DescriptionTB.Text == "")
+            {
+                MC[0].Description = "This card has no description.";
+            }
+            else
+                MC[0].Description = DescriptionTB.Text;
         }
 
         private void SaveButton_Click(object sender, EventArgs e)
