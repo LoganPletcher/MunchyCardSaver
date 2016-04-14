@@ -43,7 +43,7 @@ namespace MunchyCardSaver
             }
             else
             {
-                FileStream LoadFile = File.OpenRead(@"..\..\SavedTeamFiles\Empty.XML");
+                FileStream LoadFile = File.OpenRead(@"..\..\MunchyCardSaver\Empty.XML");
                 XmlSerializer bf = new XmlSerializer(typeof(T));
                 MalleableVar = (T)bf.Deserialize(LoadFile);
                 LoadFile.Close();

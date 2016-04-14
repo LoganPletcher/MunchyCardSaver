@@ -42,6 +42,7 @@
             this.Gold = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.PowerTB = new System.Windows.Forms.TextBox();
+            this.LoadButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -127,9 +128,9 @@
             // SaveButton
             // 
             this.SaveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SaveButton.Location = new System.Drawing.Point(485, 26);
+            this.SaveButton.Location = new System.Drawing.Point(490, 7);
             this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Size = new System.Drawing.Size(122, 53);
+            this.SaveButton.Size = new System.Drawing.Size(122, 45);
             this.SaveButton.TabIndex = 24;
             this.SaveButton.Text = "Save Card Info";
             this.SaveButton.UseVisualStyleBackColor = true;
@@ -197,11 +198,23 @@
             this.PowerTB.TabIndex = 28;
             this.PowerTB.TextChanged += new System.EventHandler(this.PowerTB_TextChanged);
             // 
+            // LoadButton
+            // 
+            this.LoadButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoadButton.Location = new System.Drawing.Point(490, 57);
+            this.LoadButton.Name = "LoadButton";
+            this.LoadButton.Size = new System.Drawing.Size(122, 45);
+            this.LoadButton.TabIndex = 29;
+            this.LoadButton.Text = "Load Card Info";
+            this.LoadButton.UseVisualStyleBackColor = true;
+            this.LoadButton.Click += new System.EventHandler(this.LoadButton_Click);
+            // 
             // Treasure_Info
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 562);
+            this.Controls.Add(this.LoadButton);
             this.Controls.Add(this.PowerTB);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.ErrorTB);
@@ -239,5 +252,6 @@
         private System.Windows.Forms.TextBox Gold;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox PowerTB;
+        private System.Windows.Forms.Button LoadButton;
     }
 }

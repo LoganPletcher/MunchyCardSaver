@@ -101,5 +101,25 @@ namespace MunchyCardSaver
             else
                 ErrorTB.Text = "Invalid inputs. Please input a number only.";
         }
+
+        private void LoadButton_Click(object sender, EventArgs e)
+        {
+            Save_and_Load<TreasureCard> sl = new Save_and_Load<TreasureCard>();
+            TC[0] = sl.Load();
+            if (TC[0].CardType == TreasureType.DEFAULT)
+            {
+                DefaultType.Checked = true;
+                EquipmentType.Checked = false;
+            }
+            else
+            {
+                DefaultType.Checked = false;
+                EquipmentType.Checked = true;
+            }
+            PowerTB.Text = TC[0].Power.ToString();
+            GoldTB.Text = TC[0].Gold.ToString();
+            CardNameTB.Text = TC[0].Name;
+            DescriptionTB.Text = TC[0].Description;
+        }
     }
 }

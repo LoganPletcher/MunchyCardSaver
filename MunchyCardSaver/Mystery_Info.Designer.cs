@@ -42,6 +42,7 @@
             this.ErrorTB = new System.Windows.Forms.TextBox();
             this.RewardTextDisplay = new System.Windows.Forms.TextBox();
             this.RewardTB = new System.Windows.Forms.TextBox();
+            this.LoadButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // CurseType
@@ -146,9 +147,9 @@
             // SaveButton
             // 
             this.SaveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SaveButton.Location = new System.Drawing.Point(485, 27);
+            this.SaveButton.Location = new System.Drawing.Point(490, 7);
             this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Size = new System.Drawing.Size(122, 53);
+            this.SaveButton.Size = new System.Drawing.Size(122, 45);
             this.SaveButton.TabIndex = 14;
             this.SaveButton.Text = "Save Card Info";
             this.SaveButton.UseVisualStyleBackColor = true;
@@ -197,11 +198,23 @@
             this.RewardTB.TabIndex = 18;
             this.RewardTB.TextChanged += new System.EventHandler(this.RewardTB_TextChanged);
             // 
+            // LoadButton
+            // 
+            this.LoadButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoadButton.Location = new System.Drawing.Point(490, 57);
+            this.LoadButton.Name = "LoadButton";
+            this.LoadButton.Size = new System.Drawing.Size(122, 45);
+            this.LoadButton.TabIndex = 30;
+            this.LoadButton.Text = "Load Card Info";
+            this.LoadButton.UseVisualStyleBackColor = true;
+            this.LoadButton.Click += new System.EventHandler(this.LoadButton_Click);
+            // 
             // Mystery_Info
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(785, 563);
+            this.Controls.Add(this.LoadButton);
             this.Controls.Add(this.RewardTB);
             this.Controls.Add(this.RewardTextDisplay);
             this.Controls.Add(this.ErrorTB);
@@ -238,5 +251,6 @@
         private System.Windows.Forms.TextBox ErrorTB;
         private System.Windows.Forms.TextBox RewardTextDisplay;
         private System.Windows.Forms.TextBox RewardTB;
+        private System.Windows.Forms.Button LoadButton;
     }
 }

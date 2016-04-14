@@ -112,5 +112,25 @@ namespace MunchyCardSaver
             else
                 ErrorTB.Text = "Invalid inputs. Please input a number only.";
         }
+
+        private void LoadButton_Click(object sender, EventArgs e)
+        {
+            Save_and_Load<MysteryCard> sl = new Save_and_Load<MysteryCard>();
+            MC[0] = sl.Load();
+            if (MC[0].CardType == MysteryType.CURSE)
+            {
+                CurseType.Checked = true;
+                MonsterType.Checked = false;
+            }
+            else
+            {
+                CurseType.Checked = false;
+                MonsterType.Checked = true;
+            }
+            PowerTB.Text = MC[0].Power.ToString();
+            RewardTB.Text = MC[0].Reward.ToString();
+            CardNameTB.Text = MC[0].Name;
+            DescriptionTB.Text = MC[0].Description;
+        }
     }
 }
