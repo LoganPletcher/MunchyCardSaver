@@ -17,6 +17,11 @@ namespace MunchyCardSaver
         public Treasure_Info(List<TreasureCard> tc)
         {
             TC = tc;
+            TC[0].CardType = TreasureType.DEFAULT;
+            TC[0].Description = "";
+            TC[0].Gold = 0;
+            TC[0].Name = "";
+            TC[0].Power = 0;
             InitializeComponent();
         }
 
@@ -30,18 +35,6 @@ namespace MunchyCardSaver
         {
             EquipmentType.Checked = false;
             TC[0].CardType = TreasureType.DEFAULT;
-        }
-
-        private void FalseState_CheckedChanged(object sender, EventArgs e)
-        {
-            TrueState.Checked = false;
-            TC[0].State = false;
-        }
-
-        private void TrueState_CheckedChanged(object sender, EventArgs e)
-        {
-            FalseState.Checked = false;
-            TC[0].State = true;
         }
 
         private void CardNameTB_TextChanged(object sender, EventArgs e)

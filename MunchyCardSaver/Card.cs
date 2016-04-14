@@ -13,9 +13,8 @@ public enum CardType
 
 public enum MysteryType
 {
-    CLASS = 0,
-    EVENT = 1,
-    MONSTER = 2,
+    CURSE = 0,
+    MONSTER = 1,
 }
 
 public enum TreasureType
@@ -25,70 +24,88 @@ public enum TreasureType
 }
 
 [Serializable()]
-public class MysteryCard : ICard
+public class MysteryCard : ICard, IMystery
 {
-    //[SerializeField]
-    protected string name;
-    //Name of the card
-    //[SerializeField]
-    protected string description;
-    //Effect the card has when played on field
-
-    protected bool state;
 
     public MysteryCard()
     {
-    }
-    public MysteryCard(string n, string d, int p, MysteryType mt)
-    {
-        state = false;
-        description = d;
-        name = n;
-        _mysteryType = mt;
+        Random rng = new Random();
+        int randPower = rng.Next(0, 10);
+        int randClass = rng.Next(0, 2);
+        m_power = randPower;
+        m_mysteryType = (MysteryType)randClass;
+        description = "This is a default mystery card...";
     }
 
+    public MysteryCard(string n, string d, int p, MysteryType mt)
+    {
+        description = d;
+        name = n;
+        m_power = p;
+        m_mysteryType = mt;
+    }
+
+    private MysteryType m_mysteryType;
+
+    private int m_power;
+
+    private int m_reward;
+
+    protected string name;
+    //Name of the card
+
+    protected string description;
+    //Effect the card has when played on field
+
+    /// <summary>
+    /// the Treasure value of this card
+    /// 0 if it's a curse
+    /// # if it's a monster
+    /// </summary>
+    public int Reward
+    {
+        get
+        {
+            return m_reward;
+        }
+
+        set
+        {
+            m_reward = value;
+        }
+    }
+
+    public MysteryType CardType
+    {
+        get
+        {
+            return m_mysteryType;
+        }
+
+        set
+        {
+            m_mysteryType = value;
+        }
+    }
 
     public string Info
     {
 
         get
         {
-            string s = state.ToString();
+            //string s = state.ToString();
             string n = name.ToString();
-            string d = description.ToString();
+            string d = name.ToString();
 
-            return "State: " + s + "Name: " + n + "Description: " + d;
+            return "Name: " + n + "Description: " + d;
         }
         set { }
     }
-    sealed class Class
-    {
-
-    }
-
-    internal class Event
-    {
-
-    }
-
-    internal class Monster
-    {
-        public int power;
-    }
-
-    protected int m_power;
-
 
     public string Name
     {
         get { return name; }
         set { name = value; }
-    }
-
-    public bool State
-    {
-        get { return state; }
-        set { state = value; }
     }
 
     public string Description
@@ -103,28 +120,93 @@ public class MysteryCard : ICard
         set { m_power = value; }
     }
 
-    protected MysteryType _mysteryType;
-
-    public MysteryType mType
-    {
-        get { return _mysteryType; }
-        set { _mysteryType = value; }
-    }
 }
 
 [Serializable()]
 public class TreasureCard : ICard, ITreasure
 {
+    public enum Equipment
+    {
+        HEAD,
+        BODY,
+        FEET,
+        HANDS,
+    }
+    //Effect the card has when played on field	
+
+    public TreasureCard()
+    {
+
+    }
+
+    public TreasureCard(string n, string d, int g, int p)
+    {
+
+        m_description = d;
+        m_name = n;
+        m_GoldValue = g;
+        m_power = p;
+    }
+
+    public TreasureCard(string n, string d, int g)
+    {
+
+        m_description = d;
+        m_name = n;
+        m_GoldValue = g;
+    }
+
+    protected Equipment ItemSlot;
+
+    private TreasureType m_cardType;
+    
     protected string m_name;
     //Name of the card
+
     protected string m_description;
     //Effect the card has when played on field
-    
-    protected int m_power;
-    //Effect the card has when played on field
 
-    protected bool m_state;
-    private TreasureType m_cardType;
+    protected int m_power;
+
+    private int m_GoldValue;
+
+    public int Gold
+    {
+        get { return m_GoldValue; }
+        set { m_GoldValue = value; }
+
+    }
+
+    public string Name
+    {
+        get { return m_name; }
+        set { m_name = value; }
+    }
+
+    public string Description
+    {
+        get { return m_description; }
+        set { m_description = value; }
+    }
+
+    public int Power
+    {
+        get { return m_power; }
+        set { m_power = value; }
+    }
+
+    public string Info
+    {
+        get
+        {
+            string n = m_name.ToString();
+            string d = m_description.ToString();
+            string g = m_GoldValue.ToString();
+            return "Name: " + n + " Description: " + d + " Gold: " + g;
+        }
+        set { }
+    }
+
     public TreasureType CardType
     {
         get { return m_cardType; }
@@ -136,82 +218,6 @@ public class TreasureCard : ICard, ITreasure
     //    get { return typeof(TreasureCardMono); }
     //    set { }
     //}
-
-    public int Power
-    {
-        get { return m_power; }
-        set { m_power = value; }
-    }
-    public string Info
-    {
-
-        get
-        {
-            string s = m_state.ToString();
-            string n = m_name.ToString();
-            string d = m_name.ToString();
-            string g = m_GoldValue.ToString();
-            return "State: " + s + "Name: " + n + "Description: " + d + "Gold: " + g;
-        }
-        set { }
-    }
-    public TreasureCard()
-    {
-
-    }
-
-    public TreasureCard(string n, string d, int g, int p)
-    {
-        m_state = false;
-        m_description = d;
-        m_name = n;
-        m_GoldValue = g;
-        m_power = p;
-    }
-    public TreasureCard(string n, string d, int g)
-    {
-        m_state = false;
-        m_description = d;
-        m_name = n;
-        m_GoldValue = g;
-    }
-
-    public enum Equipment
-    {
-        HEAD,
-        BODY,
-        FEET,
-        HANDS,
-    }
-
-    protected Equipment ItemSlot;
-    private int m_GoldValue;
-
-    public int Gold
-    {
-        get { return m_GoldValue; }
-        set { }
-
-    }
-
-
-    public string Name
-    {
-        get { return m_name; }
-        set { m_name = value; }
-    }
-
-    public bool State
-    {
-        get { return m_state; }
-        set { m_state = value; }
-    }
-
-    public string Description
-    {
-        get { return m_description; }
-        set { m_description = value; }
-    }
 
 }
 

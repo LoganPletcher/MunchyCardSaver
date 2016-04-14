@@ -28,50 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ClassType = new System.Windows.Forms.CheckBox();
-            this.EventType = new System.Windows.Forms.CheckBox();
+            this.CurseType = new System.Windows.Forms.CheckBox();
             this.MonsterType = new System.Windows.Forms.CheckBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.CardNameTB = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.PowerTextDisplay = new System.Windows.Forms.TextBox();
             this.PowerTB = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.FalseState = new System.Windows.Forms.CheckBox();
-            this.TrueState = new System.Windows.Forms.CheckBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.DescriptionTB = new System.Windows.Forms.TextBox();
             this.SaveButton = new System.Windows.Forms.Button();
             this.BackButton = new System.Windows.Forms.Button();
             this.ErrorTB = new System.Windows.Forms.TextBox();
+            this.RewardTextDisplay = new System.Windows.Forms.TextBox();
+            this.RewardTB = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // ClassType
+            // CurseType
             // 
-            this.ClassType.AutoSize = true;
-            this.ClassType.Location = new System.Drawing.Point(12, 40);
-            this.ClassType.Name = "ClassType";
-            this.ClassType.Size = new System.Drawing.Size(60, 17);
-            this.ClassType.TabIndex = 1;
-            this.ClassType.Text = "CLASS";
-            this.ClassType.UseVisualStyleBackColor = true;
-            this.ClassType.CheckedChanged += new System.EventHandler(this.ClassType_CheckedChanged);
-            // 
-            // EventType
-            // 
-            this.EventType.AutoSize = true;
-            this.EventType.Location = new System.Drawing.Point(12, 63);
-            this.EventType.Name = "EventType";
-            this.EventType.Size = new System.Drawing.Size(62, 17);
-            this.EventType.TabIndex = 2;
-            this.EventType.Text = "EVENT";
-            this.EventType.UseVisualStyleBackColor = true;
-            this.EventType.CheckedChanged += new System.EventHandler(this.EventType_CheckedChanged);
+            this.CurseType.AutoSize = true;
+            this.CurseType.Location = new System.Drawing.Point(12, 40);
+            this.CurseType.Name = "CurseType";
+            this.CurseType.Size = new System.Drawing.Size(63, 17);
+            this.CurseType.TabIndex = 2;
+            this.CurseType.Text = "CURSE";
+            this.CurseType.UseVisualStyleBackColor = true;
+            this.CurseType.CheckedChanged += new System.EventHandler(this.CurseType_CheckedChanged);
             // 
             // MonsterType
             // 
             this.MonsterType.AutoSize = true;
-            this.MonsterType.Location = new System.Drawing.Point(12, 86);
+            this.MonsterType.Location = new System.Drawing.Point(12, 58);
             this.MonsterType.Name = "MonsterType";
             this.MonsterType.Size = new System.Drawing.Size(80, 17);
             this.MonsterType.TabIndex = 3;
@@ -114,58 +101,25 @@
             this.CardNameTB.TabIndex = 6;
             this.CardNameTB.TextChanged += new System.EventHandler(this.CardNameTB_TextChanged);
             // 
-            // textBox4
+            // PowerTextDisplay
             // 
-            this.textBox4.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(247, 14);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(51, 14);
-            this.textBox4.TabIndex = 7;
-            this.textBox4.Text = "Power: ";
+            this.PowerTextDisplay.BackColor = System.Drawing.SystemColors.Control;
+            this.PowerTextDisplay.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.PowerTextDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PowerTextDisplay.Location = new System.Drawing.Point(247, 14);
+            this.PowerTextDisplay.Name = "PowerTextDisplay";
+            this.PowerTextDisplay.ReadOnly = true;
+            this.PowerTextDisplay.Size = new System.Drawing.Size(51, 14);
+            this.PowerTextDisplay.TabIndex = 7;
+            this.PowerTextDisplay.Text = "Power: ";
             // 
             // PowerTB
             // 
             this.PowerTB.Location = new System.Drawing.Point(294, 14);
             this.PowerTB.Name = "PowerTB";
-            this.PowerTB.Size = new System.Drawing.Size(100, 20);
+            this.PowerTB.Size = new System.Drawing.Size(60, 20);
             this.PowerTB.TabIndex = 8;
             this.PowerTB.TextChanged += new System.EventHandler(this.PowerTB_TextChanged);
-            // 
-            // textBox6
-            // 
-            this.textBox6.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(247, 38);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(49, 14);
-            this.textBox6.TabIndex = 9;
-            this.textBox6.Text = "State";
-            // 
-            // FalseState
-            // 
-            this.FalseState.AutoSize = true;
-            this.FalseState.Location = new System.Drawing.Point(247, 66);
-            this.FalseState.Name = "FalseState";
-            this.FalseState.Size = new System.Drawing.Size(32, 17);
-            this.FalseState.TabIndex = 10;
-            this.FalseState.Text = "0";
-            this.FalseState.UseVisualStyleBackColor = true;
-            this.FalseState.CheckedChanged += new System.EventHandler(this.FalseState_CheckedChanged);
-            // 
-            // TrueState
-            // 
-            this.TrueState.AutoSize = true;
-            this.TrueState.Location = new System.Drawing.Point(247, 86);
-            this.TrueState.Name = "TrueState";
-            this.TrueState.Size = new System.Drawing.Size(32, 17);
-            this.TrueState.TabIndex = 11;
-            this.TrueState.Text = "1";
-            this.TrueState.UseVisualStyleBackColor = true;
-            this.TrueState.CheckedChanged += new System.EventHandler(this.TrueState_CheckedChanged);
             // 
             // textBox7
             // 
@@ -223,27 +177,45 @@
             this.ErrorTB.Size = new System.Drawing.Size(172, 44);
             this.ErrorTB.TabIndex = 16;
             // 
+            // RewardTextDisplay
+            // 
+            this.RewardTextDisplay.BackColor = System.Drawing.SystemColors.Control;
+            this.RewardTextDisplay.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.RewardTextDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RewardTextDisplay.Location = new System.Drawing.Point(360, 15);
+            this.RewardTextDisplay.Name = "RewardTextDisplay";
+            this.RewardTextDisplay.ReadOnly = true;
+            this.RewardTextDisplay.Size = new System.Drawing.Size(59, 14);
+            this.RewardTextDisplay.TabIndex = 17;
+            this.RewardTextDisplay.Text = "Reward: ";
+            // 
+            // RewardTB
+            // 
+            this.RewardTB.Location = new System.Drawing.Point(415, 13);
+            this.RewardTB.Name = "RewardTB";
+            this.RewardTB.Size = new System.Drawing.Size(60, 20);
+            this.RewardTB.TabIndex = 18;
+            this.RewardTB.TextChanged += new System.EventHandler(this.RewardTB_TextChanged);
+            // 
             // Mystery_Info
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(785, 563);
+            this.Controls.Add(this.RewardTB);
+            this.Controls.Add(this.RewardTextDisplay);
             this.Controls.Add(this.ErrorTB);
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.DescriptionTB);
             this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.TrueState);
-            this.Controls.Add(this.FalseState);
-            this.Controls.Add(this.textBox6);
             this.Controls.Add(this.PowerTB);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.PowerTextDisplay);
             this.Controls.Add(this.CardNameTB);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.MonsterType);
-            this.Controls.Add(this.EventType);
-            this.Controls.Add(this.ClassType);
+            this.Controls.Add(this.CurseType);
             this.Name = "Mystery_Info";
             this.Text = "Munchy Card Saver";
             this.ResumeLayout(false);
@@ -252,22 +224,19 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.CheckBox ClassType;
-        private System.Windows.Forms.CheckBox EventType;
+        private System.Windows.Forms.CheckBox CurseType;
         private System.Windows.Forms.CheckBox MonsterType;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox CardNameTB;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox PowerTextDisplay;
         private System.Windows.Forms.TextBox PowerTB;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.CheckBox FalseState;
-        private System.Windows.Forms.CheckBox TrueState;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox DescriptionTB;
         private System.Windows.Forms.Button SaveButton;
         private System.Windows.Forms.Button BackButton;
         private System.Windows.Forms.TextBox ErrorTB;
+        private System.Windows.Forms.TextBox RewardTextDisplay;
+        private System.Windows.Forms.TextBox RewardTB;
     }
 }

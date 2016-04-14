@@ -38,9 +38,6 @@
             this.SaveButton = new System.Windows.Forms.Button();
             this.DescriptionTB = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
-            this.TrueState = new System.Windows.Forms.CheckBox();
-            this.FalseState = new System.Windows.Forms.CheckBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.GoldTB = new System.Windows.Forms.TextBox();
             this.Gold = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -160,39 +157,6 @@
             this.textBox7.Text = "Description";
             this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // TrueState
-            // 
-            this.TrueState.AutoSize = true;
-            this.TrueState.Location = new System.Drawing.Point(247, 85);
-            this.TrueState.Name = "TrueState";
-            this.TrueState.Size = new System.Drawing.Size(32, 17);
-            this.TrueState.TabIndex = 21;
-            this.TrueState.Text = "1";
-            this.TrueState.UseVisualStyleBackColor = true;
-            this.TrueState.CheckedChanged += new System.EventHandler(this.TrueState_CheckedChanged);
-            // 
-            // FalseState
-            // 
-            this.FalseState.AutoSize = true;
-            this.FalseState.Location = new System.Drawing.Point(247, 65);
-            this.FalseState.Name = "FalseState";
-            this.FalseState.Size = new System.Drawing.Size(32, 17);
-            this.FalseState.TabIndex = 20;
-            this.FalseState.Text = "0";
-            this.FalseState.UseVisualStyleBackColor = true;
-            this.FalseState.CheckedChanged += new System.EventHandler(this.FalseState_CheckedChanged);
-            // 
-            // textBox6
-            // 
-            this.textBox6.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(247, 37);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(49, 14);
-            this.textBox6.TabIndex = 19;
-            this.textBox6.Text = "State";
-            // 
             // GoldTB
             // 
             this.GoldTB.Location = new System.Drawing.Point(285, 13);
@@ -245,9 +209,6 @@
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.DescriptionTB);
             this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.TrueState);
-            this.Controls.Add(this.FalseState);
-            this.Controls.Add(this.textBox6);
             this.Controls.Add(this.GoldTB);
             this.Controls.Add(this.Gold);
             this.Controls.Add(this.CardNameTB);
@@ -274,9 +235,6 @@
         private System.Windows.Forms.Button SaveButton;
         private System.Windows.Forms.TextBox DescriptionTB;
         private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.CheckBox TrueState;
-        private System.Windows.Forms.CheckBox FalseState;
-        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox GoldTB;
         private System.Windows.Forms.TextBox Gold;
         private System.Windows.Forms.TextBox textBox3;
